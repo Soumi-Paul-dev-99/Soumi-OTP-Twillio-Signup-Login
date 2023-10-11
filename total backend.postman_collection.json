@@ -1,0 +1,204 @@
+{
+	"info": {
+		"_postman_id": "3ae5d26b-b2ed-4f68-adef-d3b2b1a35040",
+		"name": "total backend",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25539307"
+	},
+	"item": [
+		{
+			"name": "signup page",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "first_name",
+							"value": "soumi ",
+							"type": "text"
+						},
+						{
+							"key": "last_name",
+							"value": "paul",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "soumi.paul.dev99@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "text"
+						},
+						{
+							"key": "number",
+							"value": "9330719639",
+							"type": "text"
+						},
+						{
+							"key": "message",
+							"value": "hi myself soumi",
+							"type": "text"
+						},
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Users/user/Downloads/9d4b55d303a9fe93c10601e54f0f6659.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/signup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login user",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjUyNjg1MjIwNjAwMGQyNTlkZDI5NzRkIiwiZW1haWwiOiJzb3VtaS5wYXVsLmRldjk5QGdtYWlsLmNvbSIsImlhdCI6MTY5NzAyMzI2NiwiZXhwIjoxNjk3MDM0MDY2fQ.1nccOOffvjBV385Z3X8HCCZst6kwTeo0QQRjl86wIYE",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n      \"email\" :\"soumi.paul.dev99@gmail.com\",\r\n    \"password\":\"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "twilio test for otp send",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjQ4MmY4YTk1YzhmMmQyNzZlMjIyOTRkIiwiZW1haWwiOiJvQGdtYWlsLmNvbSIsImlhdCI6MTY4NjMwNTI5NywiZXhwIjoxNjg2MzE2MDk3fQ.8I7X2AKd59uCfbZ3DERaAG4EPAMfAlVZClQ2awOqqlE",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/api/test",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"test"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "twilio test for otp send signin",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjQ4MmY4YTk1YzhmMmQyNzZlMjIyOTRkIiwiZW1haWwiOiJvQGdtYWlsLmNvbSIsImlhdCI6MTY4NjMwNTI5NywiZXhwIjoxNjg2MzE2MDk3fQ.8I7X2AKd59uCfbZ3DERaAG4EPAMfAlVZClQ2awOqqlE",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/api/signin?phonenumber=919330719639&channel=sms",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"signin"
+					],
+					"query": [
+						{
+							"key": "phonenumber",
+							"value": "919330719639"
+						},
+						{
+							"key": "channel",
+							"value": "sms"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "twilio test for otp send verify",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjQ4MmY4YTk1YzhmMmQyNzZlMjIyOTRkIiwiZW1haWwiOiJvQGdtYWlsLmNvbSIsImlhdCI6MTY4NjMwNTI5NywiZXhwIjoxNjg2MzE2MDk3fQ.8I7X2AKd59uCfbZ3DERaAG4EPAMfAlVZClQ2awOqqlE",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/api/verify?phonenumber=919330719639&code=187199",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"verify"
+					],
+					"query": [
+						{
+							"key": "phonenumber",
+							"value": "919330719639"
+						},
+						{
+							"key": "code",
+							"value": "187199"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

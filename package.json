@@ -1,0 +1,30 @@
+{
+  "name": "blog",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cloudinary": "^1.37.1",
+    "datauri": "^4.1.0",
+    "dotenv": "^16.1.4",
+    "express": "^4.18.2",
+    "fast2sms": "^1.0.3",
+    "file-uri-to-path": "^2.0.0",
+    "jsonwebtoken": "^9.0.0",
+    "mailgen": "^2.0.27",
+    "mongoose": "^7.2.2",
+    "multer": "^1.4.5-lts.1",
+    "nodemailer": "^6.9.3",
+    "nodemon": "^2.0.22",
+    "twilio": "^4.11.2"
+  }
+}
